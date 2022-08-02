@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content  %}
+    <div style="text-align: center;">
+            <!--        어떤앱에서:어떤라우팅으로가라-->
+        <form action="{% url 'accountapp:create' %}" method="post">
+<!--            장고에서 post method를 쓰려고하면 form 내부에 첫번째로 붙여야하는거-->
+            {% csrf_token %}
+<!--            view.py에서 AccountCreateView클래스에서 선언한 form_class가 구성해놓은 form 객체 바로 불러옴-->
+            {{ form }}
+            <input type="submit" value="제출" class="btn btn-primary">
+        </form>
+        
+    </div>
+
+
+{% endblock %}
+
