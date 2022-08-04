@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
-
 # Create your views here.
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView
@@ -34,6 +33,7 @@ def hello_world(request):
         # 모델 객체의 모든 정보를 가져옴
         hello_world_list = HelloWorld.objects.all()
         return render(request, 'accountapp/hello_world.html', context={'hello_world_list': hello_world_list})
+
 
 # class base view가 훨씬 직관적이고 편하다. django의 좋은기능? 같음.
 class AccountCreateView(CreateView):
