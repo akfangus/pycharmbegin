@@ -13,10 +13,10 @@ class Profile(models.Model):
     # SET_DEFAULT : default값으로 바꿈 (default가 있을때만 가능)
 
     # related_name : 쉽게 연결하기 위한 이름 설정
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profileapp')
 
     # 이미지저장
     # upload_to : 이미지를 서버 어디에 저장할지?
-    image = models.ImageField(upload_to='profile/', null=True)
+    image = models.ImageField(upload_to='profileapp/', null=True)
     nickname = models.CharField(max_length=20, unique=True, null=True)
     message = models.CharField(max_length=100, null=True)
