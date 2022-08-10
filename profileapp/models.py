@@ -12,8 +12,9 @@ class Profile(models.Model):
     # SET_NULL : FK값을 널로 바꿈
     # SET_DEFAULT : default값으로 바꿈 (default가 있을때만 가능)
 
-    # related_name : 쉽게 연결하기 위한 이름 설정
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profileapp')
+    # related_name : html에 쉽게 연결하기 위한 이름 설정 =>
+    # OneToOneField를 통해 user객체와 profile 객채의 연결고리가 생성되어짐.!!!!!!!!
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
 
     # 이미지저장
     # upload_to : 이미지를 서버 어디에 저장할지?

@@ -86,3 +86,6 @@ db.sqlite3
 .idea/
 
 __pycache__/
+
+# 이미지 저장되는 미디어폴더도 굳이 깃할피요 없어보임.
+media/
