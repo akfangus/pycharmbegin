@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+#172.30.82.75
 from pathlib import Path
 
 import environ
@@ -37,7 +37,9 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+# 여기서 open을 해줘야 외부 접속이 가능한듯.
+# *는 전체
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 

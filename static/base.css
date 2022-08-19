@@ -13,3 +13,10 @@
 .pragmatic_header_button{
     font-size:.8rem;
 }
+
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 12px;
+    }
+}
