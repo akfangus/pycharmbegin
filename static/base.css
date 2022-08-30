@@ -20,3 +20,13 @@
         font-size: 12px;
     }
 }
+
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}

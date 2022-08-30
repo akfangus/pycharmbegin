@@ -24,5 +24,6 @@ urlpatterns = [
                   path('profiles/', include('profileapp.urls')),
                   path('articles/', include('articleapp.urls')),
                   path('comments/', include('commentapp.urls')),
+                  path('projects/', include('projectapp.urls')),
 # 이미지를 화면에 보여주기 위한 static을 추가해준다고합니다.
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
