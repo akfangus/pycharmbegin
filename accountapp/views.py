@@ -50,7 +50,7 @@ class AccountCreateView(CreateView):
     form_class = UserCreationForm
     # reverse 와 reverse_lazy의 차이? : reverse_lazy는 클래스에서만 사용할수 있다. 클래스안에서 reverse는 안됨. reverse는 함수형에서
     # submit성공했을때 redirect설정
-    success_url = reverse_lazy('accountapp:login')
+    success_url = reverse_lazy('articleapp:list')
     template_name = 'accountapp/create.html'
 
 
@@ -72,7 +72,7 @@ class AccountDetailView(DetailView, MultipleObjectMixin):
 class AccountUpdateView(UpdateView):
     model = User
     form_class = AccountUpdateForm
-    success_url = reverse_lazy('accountapp:login')
+    success_url = reverse_lazy('articleapp:list')
     template_name = 'accountapp/update.html'
     context_object_name = 'target_user'
 
@@ -81,6 +81,6 @@ class AccountUpdateView(UpdateView):
 @method_decorator(has_ownershop, 'post')
 class AccountDeleteView(DeleteView):
     model = User
-    success_url = reverse_lazy('accountapp:login')
+    success_url = reverse_lazy('articleapp:list')
     template_name = 'accountapp/delete.html'
     context_object_name = 'target_user'
